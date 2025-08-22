@@ -1,0 +1,66 @@
+---
+  // index.astro
+---
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo de Incremento en Astro</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        color: #333;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #0070f3;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #005bb5;
+      }
+      #counter {
+        font-size: 24px;
+        margin: 20px 0;
+      }
+    </style>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/TU_ID_DE_CLARITY";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "syvhv4lhuz");
+    </script>
+  </head>
+  <body>
+    <h1>Incremento en Astro</h1>
+    <p id="counter">0</p>
+    <button id="increment">Incrementar</button>
+
+    <script>
+      const counter = document.getElementById("counter");
+      const button = document.getElementById("increment");
+      let count = 0;
+
+      button.addEventListener("click", () => {
+        count += 1;
+        counter.textContent = count;
+      });
+    </script>
+  </body>
+</html>
